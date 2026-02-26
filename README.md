@@ -6,7 +6,8 @@ Project Name: Smart Expense Tracker
 Group Member :  
 1. Al Sadique Nuhin - 23524202061  
 2.Md Junayet Hossain Mohit - 23524202065  
-3.Abdullah Mahmud Yamin - 23524202085 
+3.Abdullah Mahmud Yamin - 23524202085
+ 
 4.Mashrafi Elahi - 23524202137
 
 Submission Date: 26 February 2026 
