@@ -16,6 +16,67 @@ Group Members:
 3. Abdullah Mahmud Yamin - 23524202085
 4. Mashrafi Elahi - 23524202137
 
+## Methodology
+
+### Purpose (Objective)
+
+The purpose of the Smart Expense Tracker is to help users record, manage, and analyze their daily expenses efficiently. The system is designed to improve financial awareness by allowing users to monitor their spending habits and maintain better control over their personal budgets.
+
+### Product Scope
+
+The Smart Expense Tracker is a web-based application that enables users to add their daily expenses, categorize them according to different spending types such as food, transport, shopping, bills, entertainment, health, education, or other expenses, and monitor their overall financial activities. The system provides a simple and interactive interface through which users can review their expense history and observe summaries or reports of their spending patterns. The application is accessible through standard web browsers on both desktop and mobile devices.
+
+### User Classes
+
+The primary user of the system is the general user who registers and logs in to manage personal expenses. An optional admin user also exists to manage user account status and oversee overall system activity in the frontend demo.
+
+### Functional Requirements
+
+- User can register an account.
+- User can log in and log out.
+- User login state can persist after page refresh.
+- User can reset a password through the local demo forgot password flow.
+- User can add new expenses with details such as amount, date, category, description, and optional receipt.
+- User can edit existing expenses.
+- User can delete expenses.
+- User can categorize expenses using the default categories, including Other.
+- User can view expense history.
+- System automatically calculates total expenses.
+- System generates and displays expense summaries and reports.
+- User can export CSV reports.
+- User can set monthly budgets and category budgets.
+- User can create bill reminders.
+- User can update profile, preference, and appearance settings.
+- User can export and restore full backup JSON files.
+- Admin/demo user can view system summary and manage non-admin user account status.
+
+### Non-Functional Requirements
+
+- The system should load quickly in a modern browser.
+- The system should require login authentication before accessing app data.
+- The system should be user-friendly and easy to navigate.
+- The system should be mobile responsive.
+- The system should store data reliably in browser storage for the frontend-only project scope.
+- The system should provide backup and restore support to reduce the risk of local browser data loss.
+- The system should handle invalid input and invalid backup files safely.
+- The system should run without console errors during normal use.
+
+### Operating Environment
+
+The Smart Expense Tracker operates within a web browser environment such as Chrome, Edge, Safari, or other modern browsers. It can be accessed from devices such as mobile phones, tablets, or laptops. Since the current project is frontend-only, it can run from a local static server and does not require a backend server.
+
+### Constraints
+
+The system is developed using HTML, CSS, and JavaScript technologies. Hosting resources may be limited, so the design remains lightweight and efficient. The application functions as a browser-based frontend system and stores data locally in browser storage.
+
+### Assumptions
+
+It is assumed that users have access to a modern web browser and possess basic knowledge of how to use web applications. For this project version, it is also assumed that browser storage is available. A backend server, real database, real email service, and cloud synchronization are considered future improvements rather than current project requirements.
+
+### Risks
+
+There is a potential risk of data loss if browser data is cleared and no backup has been exported. Security limitations may exist because authentication and password recovery are handled locally for frontend demonstration purposes. Incorrect data entry by users may affect the accuracy of expense reports. Large receipt uploads may also increase browser storage usage.
+
 ## Current Features
 
 - Frontend-only app with local browser storage persistence.
