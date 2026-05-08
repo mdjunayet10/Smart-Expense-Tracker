@@ -16,6 +16,15 @@ Group Members:
 3. Abdullah Mahmud Yamin - 23524202085
 4. Mashrafi Elahi - 23524202137
 
+## Group Member Contribution
+
+| Member Name | Student ID | Contribution |
+|---|---:|---|
+| Al Sadique Nuhin | 23524202061 | Authentication system, login/register/logout, forgot password demo, admin account, user status management, and audit activity |
+| Md Junayet Hossain Mohit | 23524202065 | Expense management, add/edit/delete expenses, receipt handling, budgets, category budgets, bill reminders, and expense filters |
+| Abdullah Mahmud Yamin | 23524202085 | Dashboard, spending overview, recent expenses, category analytics, forecast, report builder, charts, and CSV export |
+| Mashrafi Elahi | 23524202137 | UI/UX design, responsive layout, theme customization, language/currency settings, backup/restore, documentation, and testing checklist |
+
 ## Methodology
 
 ### Purpose (Objective)
