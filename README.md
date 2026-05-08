@@ -195,22 +195,4 @@ Restore replaces the current local app data after confirmation. Invalid backup f
 - Automated tests.
 - Production deployment with secure hosting.
 
-## Final Package Guidance
 
-For final submission, include:
-
-- `index.html`
-- `assets/`
-- `README.md`
-- `TESTING.md`
-- `.gitignore`
-- Project PDFs/docs
-
-Exclude:
-
-- `.git/`
-- `.venv/`
-- `.DS_Store`
-- `__MACOSX/`
-- temporary/cache files
-- editor/system junk files
