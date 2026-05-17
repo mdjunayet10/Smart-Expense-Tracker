@@ -1,0 +1,256 @@
+/*
+  Mashrafi Member-4 UI/UX Layer
+  Handles: Responsive design, dark/light theme, theme colors, font sizing, settings styling
+  Safe to merge independently without touching shared styles.
+*/
+
+/* ===== THEME VARIABLES & MODES ===== */
+
+:root {
+  --bg-main: #050b10;
+  --bg-soft: #0b141c;
+  --surface: #121e28;
+  --surface-elevated: #182632;
+  --ink-900: #eaf3f0;
+  --ink-700: #c3d5d0;
+  --ink-500: #8fa8a1;
+  --green-700: #1ca16c;
+  --green-600: #24b278;
+  --green-300: #7ad4ae;
+  --amber-500: #d19a49;
+  --amber-300: #f0c98b;
+  --danger: #ff8f8f;
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 11px;
+  --font-display: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
+  --font-body: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "Consolas", monospace;
+  --ring: 0 0 0 3px rgba(42, 186, 131, 0.3);
+  --shadow: 0 24px 58px rgba(3, 9, 13, 0.55);
+}
+
+body.theme-dark {
+  --bg-main: #030915;
+  --bg-soft: #091426;
+  --surface: #101f36;
+  --surface-elevated: #152946;
+  --ink-900: #f3f8ff;
+  --ink-700: #c7d8ee;
+  --ink-500: #88a4c5;
+}
+
+body.theme-light {
+  --bg-main: #eef4f9;
+  --bg-soft: #dfe9f3;
+  --surface: #ffffff;
+  --surface-elevated: #f5f9fe;
+  --ink-900: #102238;
+  --ink-700: #304b63;
+  --ink-500: #557089;
+  --shadow: 0 24px 52px rgba(41, 67, 92, 0.15);
+}
+
+/* ===== THEME COLORS ===== */
+
+body.theme-color-emerald {
+  --green-700: #1ca16c;
+  --green-600: #24b278;
+  --amber-500: #d19a49;
+}
+
+body.theme-color-ocean {
+  --green-700: #256fb3;
+  --green-600: #2e86d8;
+  --amber-500: #49a3d1;
+}
+
+body.theme-color-sunset {
+  --green-700: #c96f2d;
+  --green-600: #d9863f;
+  --amber-500: #e0a04e;
+}
+
+body.theme-color-rose {
+  --green-700: #b34f73;
+  --green-600: #c06084;
+  --amber-500: #d98474;
+}
+
+body.theme-color-slate {
+  --green-700: #334155;
+  --green-600: #475569;
+  --amber-500: #0ea5e9;
+}
+
+body.theme-color-cobalt {
+  --green-700: #1d4ed8;
+  --green-600: #2563eb;
+  --amber-500: #38bdf8;
+}
+
+body.theme-color-graphite {
+  --green-700: #3f3f46;
+  --green-600: #52525b;
+  --amber-500: #a1a1aa;
+}
+
+body.theme-color-amber {
+  --green-700: #92400e;
+  --green-600: #b45309;
+  --amber-500: #f59e0b;
+}
+
+/* ===== FONT SCALING ===== */
+
+html.font-small {
+  font-size: 14px;
+}
+
+html.font-medium {
+  font-size: 16px;
+}
+
+html.font-large {
+  font-size: 18px;
+}
+
+/* ===== SETTINGS FORM STYLING ===== */
+
+#settings-view .settings-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#settings-view .settings-grid > div {
+  display: grid;
+  gap: 5px;
+}
+
+#settings-view .settings-grid label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink-500);
+}
+
+#settings-view .settings-grid input,
+#settings-view .settings-grid select {
+  border: 1px solid rgba(122, 170, 148, 0.34);
+  border-radius: var(--radius-sm);
+  background: var(--surface-elevated);
+  color: var(--ink-900);
+  font-size: 0.86rem;
+  padding: 8px 10px;
+  font-family: inherit;
+}
+
+#settings-view .settings-grid input:focus,
+#settings-view .settings-grid select:focus {
+  outline: none;
+  box-shadow: var(--ring);
+  border-color: rgba(55, 203, 144, 0.72);
+}
+
+#settings-view .settings-grid > button {
+  width: fit-content;
+  align-self: start;
+}
+
+#appearance-settings-form > button[type="submit"] {
+  grid-column: 1;
+  justify-self: start;
+}
+
+/* ===== BACKUP & RESTORE STYLING ===== */
+
+#settings-view .report-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#settings-view .report-actions .btn {
+  border: 1px solid rgba(20, 92, 58, 0.15);
+}
+
+#settings-view .file-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#settings-view .hidden-file-input {
+  display: none;
+}
+
+/* ===== RESPONSIVE: TABLET & SMALL ===== */
+
+@media (max-width: 920px) {
+  #settings-view .settings-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  #settings-view .settings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #settings-view .settings-grid > div {
+    display: grid;
+    gap: 4px;
+  }
+
+  #settings-view .settings-grid label {
+    font-size: 0.75rem;
+  }
+
+  #settings-view .settings-grid input,
+  #settings-view .settings-grid select {
+    font-size: 0.8rem;
+    padding: 6px 8px;
+  }
+
+  #settings-view .report-actions {
+    flex-direction: column;
+  }
+
+  #settings-view .report-actions .btn {
+    width: 100%;
+  }
+
+  #appearance-settings-form > button[type="submit"] {
+    grid-column: 1;
+    width: 100%;
+  }
+}
+
+/* ===== LIGHT MODE OVERRIDES ===== */
+
+body.theme-light #settings-view .settings-grid input,
+body.theme-light #settings-view .settings-grid select {
+  border-color: rgba(59, 130, 246, 0.2);
+  background: var(--surface-elevated);
+  color: var(--ink-900);
+}
+
+body.theme-light #settings-view .settings-grid input:focus,
+body.theme-light #settings-view .settings-grid select:focus {
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+body.theme-light #settings-view .settings-grid label {
+  color: var(--ink-700);
+}
+
+/* ===== REDUCED MOTION ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  #settings-view .btn,
+  #settings-view input,
+  #settings-view select {
+    transition: none !important;
+  }
+}
